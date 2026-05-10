@@ -22,13 +22,13 @@ export default function HomePage() {
           </Link>
           <div className="flex items-center gap-2">
             <Link
-              href="/login"
+              href="https://app.hsahelper.com"
               className="px-3 py-1.5 text-sm font-medium text-zinc-700 hover:text-zinc-900 transition-colors"
             >
               Sign in
             </Link>
             <Link
-              href="/signup"
+              href="https://app.hsahelper.com/signup"
               className="inline-flex items-center gap-1.5 px-3 py-1.5 bg-blue-600 hover:bg-blue-700 text-white text-sm font-semibold rounded-md transition-colors shadow-sm"
             >
               Get started
@@ -59,14 +59,14 @@ export default function HomePage() {
 
           <div className="flex flex-col sm:flex-row items-center justify-center gap-3 mb-16">
             <Link
-              href="/signup"
+              href="https://app.hsahelper.com/signup"
               className="inline-flex items-center gap-1.5 px-5 py-2.5 bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-md transition-colors shadow-sm text-base"
             >
               Start tracking free
               <Icon icon="arrow_forward" size={18} />
             </Link>
             <Link
-              href="/login"
+              href="https://app.hsahelper.com"
               className="inline-flex items-center gap-1.5 px-5 py-2.5 bg-white hover:bg-zinc-50 border border-zinc-200 text-zinc-800 font-semibold rounded-md transition-colors text-base"
             >
               Sign in
@@ -100,14 +100,11 @@ export default function HomePage() {
       {/* Footer */}
       <footer className="relative z-10 border-t border-zinc-200/70">
         <div className="max-w-6xl mx-auto px-6 py-5 flex items-center justify-between text-xs text-zinc-500">
-          <span>Built with Next.js, Supabase, and Gemini AI</span>
+          <span>© {new Date().getFullYear()} HSA Helper</span>
           <div className="flex items-center gap-4">
-            <Link href="/login" className="hover:text-zinc-800 transition-colors">
-              Sign in
-            </Link>
-            <Link href="/signup" className="hover:text-zinc-800 transition-colors">
-              Sign up
-            </Link>
+            <Link href="/pricing" className="hover:text-zinc-800 transition-colors">Pricing</Link>
+            <Link href="/terms" className="hover:text-zinc-800 transition-colors">Terms</Link>
+            <Link href="/privacy" className="hover:text-zinc-800 transition-colors">Privacy</Link>
           </div>
         </div>
       </footer>
