@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="100px" height="100px" viewBox="0 0 100 100" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>icon</title>
+    <defs>
+        <polygon id="path-1" points="20 0 30 10 40 0 50 9.56498172 60 0 70 9.56498172 80 0 90 10 100 0 100 10 20 10"></polygon>
+    </defs>
+    <g id="icon" stroke="none" fill="none">
+        <path d="M0,79.875 L80,79.875 L80,83.875 C80,92.711556 72.836556,99.875 64,99.875 L16,99.875 C7.163444,99.875 0,92.711556 0,83.875 L0,79.875 Z" id="Rectangle" fill="#A2BFFF" fill-rule="evenodd"></path>
+        <path d="M20,-17.125 L80,-17.125 L80,83.875 C80,92.711556 72.836556,99.875 64,99.875 L20,99.875 L20,-17.125 Z" id="Rectangle" fill="#165DFC" fill-rule="evenodd"></path>
+        <text id="H" font-family="Inter-Regular_Bold, Inter" font-size="56" font-weight="bold" fill="#FAFBFD">
+            <tspan x="30" y="70">H</tspan>
+        </text>
+        <mask id="mask-2" fill="white">
+            <use xlink:href="#path-1" transform="translate(60, 5) rotate(180) translate(-60, -5)"></use>
+        </mask>
+        <use id="Path" fill="#FFFFFF" fill-rule="evenodd" transform="translate(60, 5) rotate(180) translate(-60, -5)" xlink:href="#path-1"></use>
+    </g>
+</svg>
