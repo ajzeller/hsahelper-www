@@ -1,13 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <svg width="100px" height="100px" viewBox="0 0 100 100" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
     <title>icon</title>
+    <defs>
+        <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="linearGradient-1">
+            <stop stop-color="#3196FE" offset="0%"></stop>
+            <stop stop-color="#165DFC" offset="100%"></stop>
+        </linearGradient>
+    </defs>
     <g id="icon" stroke="none" fill="none" fill-rule="evenodd">
-        <path d="M0,79.875 L80,79.875 L80,83.875 C80,92.711556 72.836556,99.875 64,99.875 L16,99.875 C7.163444,99.875 0,92.711556 0,83.875 L0,79.875 Z" id="Rectangle" fill="#A2BFFF"></path>
-        <g id="Path" stroke-width="1" transform="translate(20, -17.125)" fill="#165DFC">
-            <path d="M10,17.125 L20,27.125 L30,17.5600183 L40,27.125 L50,17.5600183 L60,27.125 L60,101 C60,109.836556 52.836556,117 44,117 L0,117 L3.41060513e-13,27.125 L10,17.125 Z M60,0 L60,17.125 L3.41060513e-13,17.125 L0,0 L60,0 Z" id="Combined-Shape"></path>
+        <path d="M0,79.875 L100,79.875 L100,83.875 C100,92.711556 92.836556,99.875 84,99.875 L16,99.875 C7.163444,99.875 0,92.711556 0,83.875 L0,79.875 Z" id="Rectangle" fill="#A2BFFF"></path>
+        <g id="Path" stroke-width="1" transform="translate(20, -17.125)" fill="url(#linearGradient-1)">
+            <path d="M72,17.125 L80,25.1285847 L80,101 C80,109.836556 72.836556,117 64,117 L0,117 L0,25.1285847 L8,17.125 L16,25.1285847 L24,17.125 L32,25.1285847 L40,17.125 L48,25.1285847 L56,17.125 L64,25.1285847 L72,17.125 Z M80,0 L80,17.125 L0,17.125 L0,0 L80,0 Z" id="Combined-Shape"></path>
         </g>
-        <g id="H" stroke-width="1" transform="translate(30, 16)" fill="#FAFBFD">
-            <polygon id="Path" fill-rule="nonzero" points="3.04284668 54 3.04284668 13.2578125 11.4493408 13.2578125 11.4493408 29.6204834 28.7600708 29.6204834 28.7600708 13.2578125 37.1665649 13.2578125 37.1665649 54 28.7600708 54 28.7600708 36.8302612 11.4493408 36.8302612 11.4493408 54"></polygon>
+        <g id="H" stroke-width="1" transform="translate(39.0428, 24.2578)" fill="#FAFBFD">
+            <polygon id="Path" fill-rule="nonzero" points="0 51 0 0 10.346843 0 10.346843 20.4823616 31.653157 20.4823616 31.653157 0 42 0 42 51 31.653157 51 31.653157 29.5073721 10.346843 29.5073721 10.346843 51"></polygon>
         </g>
     </g>
 </svg>

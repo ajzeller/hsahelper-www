@@ -1,6 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import { Icon } from "@/components/icon";
+import { APP_URL } from "@/lib/sites";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -15,17 +16,17 @@ export default function PrivacyPage() {
         <div className="flex items-center justify-between px-6 py-3 max-w-6xl mx-auto w-full">
           <Link href="/" className="flex items-center gap-2.5">
             <Image src="/icon.svg" alt="HSA Helper" width={32} height={32} />
-            <span className="text-sm font-semibold text-zinc-900">HSA Helper</span>
+            <span className="text-base font-semibold text-blue-600">HSA Helper</span>
           </Link>
           <div className="flex items-center gap-2">
             <Link
-              href="https://app.hsahelper.com"
+              href={APP_URL}
               className="px-3 py-1.5 text-sm font-medium text-zinc-700 hover:text-zinc-900 transition-colors"
             >
               Sign in
             </Link>
             <Link
-              href="https://app.hsahelper.com/signup"
+              href={`${APP_URL}/signup`}
               className="inline-flex items-center gap-1.5 px-3 py-1.5 bg-blue-600 hover:bg-blue-700 text-white text-sm font-semibold rounded-md transition-colors shadow-sm"
             >
               Get started
@@ -140,6 +141,8 @@ export default function PrivacyPage() {
         <div className="max-w-6xl mx-auto px-6 py-5 flex items-center justify-between text-xs text-zinc-500">
           <span>© {new Date().getFullYear()} HSA Helper</span>
           <div className="flex items-center gap-4">
+            <Link href="/pricing" className="hover:text-zinc-800 transition-colors">Pricing</Link>
+            <Link href="/blog" className="hover:text-zinc-800 transition-colors">Blog</Link>
             <Link href="/terms" className="hover:text-zinc-800 transition-colors">Terms</Link>
             <Link href="/privacy" className="hover:text-zinc-800 transition-colors">Privacy</Link>
           </div>

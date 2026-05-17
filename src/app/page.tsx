@@ -1,6 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import { Icon } from "@/components/icon";
+import { APP_URL } from "@/lib/sites";
 
 export default function HomePage() {
   return (
@@ -16,19 +17,19 @@ export default function HomePage() {
         <div className="flex items-center justify-between px-6 py-3 max-w-6xl mx-auto w-full">
           <Link href="/" className="flex items-center gap-2.5 group">
             <Image src="/icon.svg" alt="HSA Helper" width={32} height={32} />
-            <span className="text-sm font-semibold text-zinc-900">
+            <span className="text-base font-semibold text-blue-600">
               HSA Helper
             </span>
           </Link>
           <div className="flex items-center gap-2">
             <Link
-              href="https://app.hsahelper.com"
+              href={APP_URL}
               className="px-3 py-1.5 text-sm font-medium text-zinc-700 hover:text-zinc-900 transition-colors"
             >
               Sign in
             </Link>
             <Link
-              href="https://app.hsahelper.com/signup"
+              href={`${APP_URL}/signup`}
               className="inline-flex items-center gap-1.5 px-3 py-1.5 bg-blue-600 hover:bg-blue-700 text-white text-sm font-semibold rounded-md transition-colors shadow-sm"
             >
               Get started
@@ -39,61 +40,69 @@ export default function HomePage() {
       </header>
 
       {/* Hero */}
-      <main className="relative z-10 flex-1 flex items-center justify-center px-6 py-16">
-        <div className="max-w-3xl text-center">
-          <div className="inline-flex items-center gap-2 px-3 py-1 bg-blue-50 border border-blue-100 rounded-full text-xs text-blue-700 font-medium mb-8">
-            <Icon icon="auto_awesome" size={14} />
-            Smart HSA expense tracking
+      <main className="relative z-10 flex-1 flex items-center px-6 py-16">
+        <div className="max-w-6xl mx-auto w-full flex flex-col lg:flex-row items-center gap-12 lg:gap-16">
+
+          {/* Left: text */}
+          <div className="flex-1 min-w-0 flex flex-col items-start">
+            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-semibold text-zinc-900 leading-tight tracking-tight mb-5">
+              HSA Receipt tracking{" "}
+              <span className="text-blue-600">powered by AI</span>
+            </h1>
+
+            <p className="text-base sm:text-lg text-zinc-600 mb-9 leading-relaxed">
+              HSA Helper makes it effortless to log expenses, upload receipts, and
+              track reimbursements — so you never miss a tax-free dollar.
+            </p>
+
+            <div className="flex flex-col sm:flex-row items-start gap-3 mb-12">
+              <Link
+                href={`${APP_URL}/signup`}
+                className="inline-flex items-center gap-1.5 px-5 py-2.5 bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-md transition-colors shadow-sm text-base"
+              >
+                Try free for 30 days
+                <Icon icon="arrow_forward" size={18} />
+              </Link>
+              <Link
+                href={APP_URL}
+                className="inline-flex items-center gap-1.5 px-5 py-2.5 bg-white hover:bg-zinc-50 border border-zinc-200 text-zinc-800 font-semibold rounded-md transition-colors text-base"
+              >
+                Sign in
+              </Link>
+            </div>
+
+            {/* Feature highlights */}
+            <div className="grid grid-cols-1 sm:grid-cols-3 lg:grid-cols-1 xl:grid-cols-3 gap-3 w-full">
+              <FeatureCard
+                icon="auto_awesome"
+                tone="info"
+                label="AI Receipt Scanning"
+                desc="Auto-extract totals & dates"
+              />
+              <FeatureCard
+                icon="payments"
+                tone="success"
+                label="Reimbursement Tracking"
+                desc="Never lose a receipt"
+              />
+              <FeatureCard
+                icon="lock"
+                tone="neutral"
+                label="Secure Vault"
+                desc="Encrypted receipt storage"
+              />
+            </div>
           </div>
 
-          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-semibold text-zinc-900 leading-tight tracking-tight mb-5">
-            Track your{" "}
-            <span className="text-blue-600">healthcare</span>{" "}
-            expenses
-          </h1>
-
-          <p className="text-base sm:text-lg text-zinc-600 max-w-2xl mx-auto mb-9 leading-relaxed">
-            HSA Helper makes it effortless to log expenses, upload receipts, and
-            track reimbursements — so you never miss a tax-free dollar.
-          </p>
-
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-3 mb-16">
-            <Link
-              href="https://app.hsahelper.com/signup"
-              className="inline-flex items-center gap-1.5 px-5 py-2.5 bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-md transition-colors shadow-sm text-base"
-            >
-              Start tracking free
-              <Icon icon="arrow_forward" size={18} />
-            </Link>
-            <Link
-              href="https://app.hsahelper.com"
-              className="inline-flex items-center gap-1.5 px-5 py-2.5 bg-white hover:bg-zinc-50 border border-zinc-200 text-zinc-800 font-semibold rounded-md transition-colors text-base"
-            >
-              Sign in
-            </Link>
-          </div>
-
-          {/* Feature highlights */}
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 max-w-3xl mx-auto">
-            <FeatureCard
-              icon="auto_awesome"
-              tone="info"
-              label="AI Receipt Scanning"
-              desc="Auto-extract totals & dates"
-            />
-            <FeatureCard
-              icon="payments"
-              tone="success"
-              label="Reimbursement Tracking"
-              desc="Never lose a receipt"
-            />
-            <FeatureCard
-              icon="lock"
-              tone="neutral"
-              label="Secure Vault"
-              desc="Encrypted receipt storage"
+          {/* Right: app screenshot */}
+          <div className="flex-1 min-w-0 w-full lg:max-w-[65%]">
+            <div className="rounded-xl border border-zinc-200 shadow-2xl shadow-zinc-200/60 overflow-hidden aspect-[4/3]"
+              style={{
+                background: "repeating-linear-gradient(-45deg, #e4e4e7 0px, #e4e4e7 1px, #f4f4f5 1px, #f4f4f5 12px)"
+              }}
             />
           </div>
+
         </div>
       </main>
 
@@ -103,6 +112,7 @@ export default function HomePage() {
           <span>© {new Date().getFullYear()} HSA Helper</span>
           <div className="flex items-center gap-4">
             <Link href="/pricing" className="hover:text-zinc-800 transition-colors">Pricing</Link>
+            <Link href="/blog" className="hover:text-zinc-800 transition-colors">Blog</Link>
             <Link href="/terms" className="hover:text-zinc-800 transition-colors">Terms</Link>
             <Link href="/privacy" className="hover:text-zinc-800 transition-colors">Privacy</Link>
           </div>
