@@ -31,3 +31,10 @@ html {
   border: 2px solid transparent;
   background-clip: padding-box;
 }
+
+.edit-input {
+  @apply w-full min-w-0 bg-white rounded-md px-2.5 py-1.5 text-sm text-zinc-900 placeholder-zinc-400
+    border border-zinc-200
+    focus:outline-none focus:ring-2 focus:ring-blue-500/30 focus:border-blue-400
+    transition-colors;
+}
